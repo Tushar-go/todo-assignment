@@ -22,8 +22,8 @@ const Todos = () => {
     <div className='flex flex-col items-center my-4 p-4  rounded-md shadow-md'>
       {todos.length <=0 && <h1 className=' text-white text-3xl font-medium'>Add Todos!</h1>  }
       {todos.map((todo) => (
-        <div key={todo.id} className='flex gap-4 items-center mb-2 bg-white p-3 rounded-md shadow-sm w-full max-w-md'>
-          <span className='text-lg flex-grow font-medium'>{todo.text}</span>
+        <div key={todo.id} className='flex flex-wrap gap-4 items-center mb-2 bg-white p-3 rounded-md shadow-sm w-full max-w-md'>
+          <span className='text-lg flex-grow font-medium '>{todo.text}</span>
           <div className=' flex flex-row gap-1'>
           <button 
             onClick={() => dispatch(removeTodo(todo.id))} 
